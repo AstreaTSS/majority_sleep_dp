@@ -18,8 +18,7 @@ execute if score Sleeping SonicSleep >= Half SonicSleep if score Ran SonicSleep 
 execute if score Sleeping SonicSleep >= Half SonicSleep if score Ran SonicSleep matches 0 run scoreboard players operation TimeAdd SonicSleep = CurrentTime SonicSleep
 execute if score Sleeping SonicSleep >= Half SonicSleep if score Ran SonicSleep matches 0 run scoreboard players operation TimeAdd SonicSleep *= -1 SonicSleep
 execute if score Sleeping SonicSleep >= Half SonicSleep if score Ran SonicSleep matches 0 run scoreboard players operation TimeAdd SonicSleep += 24000 SonicSleep
-execute if score Sleeping SonicSleep >= Half SonicSleep if score Ran SonicSleep matches 0 run tellraw @a ["",{"score":{"name":"CurrentTime","objective":"SonicSleep"}}]
-execute if score Sleeping SonicSleep >= Half SonicSleep if score Ran SonicSleep matches 0 run function maj_sleep:time_add
+execute if score Sleeping SonicSleep >= Half SonicSleep if score Ran SonicSleep matches 0 run function maj_sleep:time_add/run
 
 scoreboard players set Ran SonicSleep 0
 execute if score Sleeping SonicSleep >= Half SonicSleep if score Ran SonicSleep matches 0 run weather clear
